@@ -146,4 +146,4 @@ Arbre de décision :
 - Classification
 - Trouver la meilleure droite qui sépare les points
 
-Entrropie : c'est la mesure de l'incertitude d'une variable aléatoire. Plus l'entropie est élevée, plus l'incertitude est grande. Plus l'entropie est faible, plus l'incertitude est faible.# AI_libraries_python
+Entrropie : c'est la mesure de l'incertitude d'une variable aléatoire. Plus l'entropie est élevée, plus l'incertitude est grande. Plus l'entropie est faible, plus l'incertitude est faible.

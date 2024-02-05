@@ -147,3 +147,34 @@ Arbre de décision :
 - Trouver la meilleure droite qui sépare les points
 
 Entrropie : c'est la mesure de l'incertitude d'une variable aléatoire. Plus l'entropie est élevée, plus l'incertitude est grande. Plus l'entropie est faible, plus l'incertitude est faible.
+
+
+Abre de décision permet de comprendre les relations entre les variables et les sorties désirées.
+On a les informations sur les variables les plus importantes.
+
+
+--------
+
+Les random forest : 
+- Supervisé
+- Classification
+- Combinaison de plusieurs arbres de décision
+
+La différence entre les arbres de décision et les random forest est que les random forest sont plus précis car ils combinent plusieurs arbres de décision. (ils prennent des parties de la base de données et font des arbres de décision dessus, puis ils combinent les résultats)
+
+
+--------
+### Non supervisé
+
+- ACP (Analyse en Composantes Principales)
+- CAH (Classification Ascendante Hiérarchique)
+- K-means
+- DBSCAN
+- Isolation Forest
+
+#### ACP (Analyse en Composantes Principales) :
+- Non supervisé
+- Réduction de dimension
+- Trouver les variables les plus importantes
+
+

@@ -193,7 +193,27 @@ Différence entre log et centré/réduire :
 - Trouver les groupes de variables les plus proches
 - Clustering 
 
-#### K-means 
+#### K-means : 
 
+- Non supervisé
+- Algorithme de clustering
+- Partitionne les données en K groupes (clusters) où chaque observation appartient au cluster avec la moyenne la plus proche
+- Il est basé sur la minimisation de la variance intra-cluster
+
+l'inertie c'est la distance de chacun des points au centre de gravité total, le nombre de cluseter le plus significatif ce sont ceux dans le coude de la courbe 
+K-means n'est pas stable donc on trouve le nombre de cluster avec l'inertie et on utilise cette valeur dans un modèle CAH
+
+#### DBSCAN (Density-Based Spatial Clustering of Applications with Noise) :
+
+- Non supervisé
+- Algorithme de clustering basé sur la densité
+- Peut trouver des clusters de forme arbitraire
+- Peut identifier les points qui ne font partie d'aucun cluster (outliers)
+
+#### Isolation Forest :
+
+- Non supervisé
+- Méthode d'identification d'anomalies (outliers)
+- Utilise un ensemble d'arbres de décision pour isoler les anomalies dans les données en les considérant comme des points inhabituels
 
 

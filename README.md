@@ -92,6 +92,22 @@ Erreuz de généralisation d'un modèle :
 - Erreur de variance : erreur de généralisation d'un modèle, à cause d'une hypothèse trop complexe : le modèle représente trop bien la relation entre les données et les sorties désirées, il apprend du bruit et non des données
 
 - Erreur de bruit : erreur de généralisation d'un modèle, à cause d'un bruit dans les données : le modèle ne peut pas représenter la relation entre les données et les sorties désirées
+---
+Comment traîté la donnée en chaîne de caractère :
+Exemple : Chat, chien, oiseau, poisson
+il faut transformer les données en données numériques pour les modèles d'apprentissage :
+- One hot encoding : chaque catégorie est transformée en une colonne binaire. Il faut faire attention car si on a beaucoup de catégories, on va avoir beaucoup de colonnes. Un modèle d'apprentissage peut être moins précis si on a trop de colonnes et peu de lignes. 
+<!-- Pour savoir combien de colonnes on peut avoir, on peut utiliser la formule : 2^(nombre de catégories) - 1 -->
+---
+Il faut : 
+- effacer les données inutiles. (on peut utiliser la corrélation pour voir les données les plus importantes)
+- regrouper les données similaires. (on peut utiliser le clustering, utiliser des données des modèles non supervisés pour regrouper les données similaires)
+- transformer les données en données numériques (on peut utiliser le one hot encoding pour les données catégorielles ou le label encoding pour les données ordinales)
+- normaliser les données (pour avoir une distribution gaussienne)
+
+pour éviter le sur-apprentissage.
+
+
 
 ---
 
@@ -169,7 +185,8 @@ Différence entre log et centré/réduire :
 
 - centré/réduire : permet de centrer les données autour de 0 et de les réduire pour avoir une variance de 1 et garde la proportionnalité entre les données
 - log : permet de réduire les valeurs élevées et d'augmenter les valeurs faibles pour avoir une distribution gaussienne, ne garde pas la proportionnalité entre les données
-
+( pour retrouver le log, il faut faire exp(x) )
+c'est important d'avoir une distribution gaussienne pour les modèles d'apprentissage
 ---
 
 ### Non supervisé

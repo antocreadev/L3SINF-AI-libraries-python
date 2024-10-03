@@ -164,7 +164,7 @@ Arbre de décision :
 - Classification
 - Trouver la meilleure droite qui sépare les points
 
-Entrropie : c'est la mesure de l'incertitude d'une variable aléatoire. Plus l'entropie est élevée, plus l'incertitude est grande. Plus l'entropie est faible, plus l'incertitude est faible.
+Entropie : c'est la mesure de l'incertitude d'une variable aléatoire. Plus l'entropie est élevée, plus l'incertitude est grande. Plus l'entropie est faible, plus l'incertitude est faible.
 
 Abre de décision permet de comprendre les relations entre les variables et les sorties désirées.
 On a les informations sur les variables les plus importantes.
@@ -231,7 +231,60 @@ K-means n'est pas stable donc on trouve le nombre de cluster avec l'inertie et o
 
 - Non supervisé
 - Méthode d'identification d'anomalies (outliers)
+
+- A utiliser après avoir fait la transformation des données en données numériques, normaliser les données, enlever les données inutiles, regrouper les données similaires, normaliser les données
+
 - Utilise un ensemble d'arbres de décision pour isoler les anomalies dans les données en les considérant comme des points inhabituels
+
+
+## Variances 
+Cela permet de supprimer les caractéristiques dont la variance est inférieure à un certain seuil.
+
+Pour supprimer les variables faible car elles ne contiennent pas beaucoup d'informations.
+
+```python
+from sklearn.feature_selection import VarianceThreshold
+selector = VarianceThreshold(threshold=0.1)
+selector.fit_transform(data)
+```
+
+## Imputation
+Cela permet de remplacer les valeurs manquantes par des valeurs calculées.
+
+```python
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(strategy='mean')
+imputer.fit_transform(data)
+```
+
+## Encodage
+Cela permet de transformer les données catégorielles en données numériques.
+
+(pd.get_dummies() permet de transformer les données catégorielles en données numériques), il faut s'en servir s'il y a un lien entre les données catégorielles.
+
+- OneHotEncoder : permet de transformer les données catégorielles en données numériques, il faut s'en servir s'il n'y a pas de lien entre les données catégorielles.
+(on peut toujours supprimer une colonne pour éviter le piège de la variable fictive)
+
+- LabelEncoder : permet de transformer les données ordinales en données numériques. (donnée ordinales : données qui ont un ordre)
+
+
+```python
+from sklearn.preprocessing import OneHotEncoder
+encoder = OneHotEncoder()
+encoder.fit_transform(data)
+```
+
+```python
+from sklearn.preprocessing import LabelEncoder
+encoder = LabelEncoder()
+encoder.fit_transform(data)
+```
+
+----
+
+Isolation forest pour supprimer les données inutiles (rows) et les données qui ne sont pas dans les clusters (outliers)
+
+ACP pour supprimer les données inutiles (columns) et les données qui ne sont pas dans les clusters (outliers)
 
 # Cheatsheet
 # Pandas 
